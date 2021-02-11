@@ -14,4 +14,10 @@ class SpecialtyController extends Controller
 
         return response()->json($specialties);
     }
+
+    public function getById($id)
+    {
+        $specialties = Specialty::where('id' , $id)->get();
+        return response()->json($specialties);
+    }
 }

@@ -21,6 +21,8 @@ $router->post('/signup', 'AuthController@signUp');
 $router->post('/login', 'AuthController@login');
 
 $router->get('/specialty', 'SpecialtyController@index');
+$router->get('/user/specialty/{specialty_id}', 'UserController@getBySpecialty');
+
 
 $router->get('/user', 'UserController@index');
 $router->put('/user/update', 'UserController@update');
